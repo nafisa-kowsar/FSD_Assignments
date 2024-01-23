@@ -7,7 +7,7 @@ import entity.Dept;
 public interface IDeptDao {
 	
 	public int insertDept(Dept dept);
-	public int updateDept(String dname, String location, int dno);
+	public int updateDept(Dept dept);
 	
 	public int deleteOne(int dno);
 	public Dept selectOne(int dno);

@@ -1,5 +1,6 @@
 package dao;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -37,10 +38,24 @@ public class DeptDaoImp implements IDeptDao{
 			e.printStackTrace();
 		}
 		return count;
+//		CallableStatement cstmt = null;
+//		try {
+//			cstmt = conn.prepareCall("{call myinsert()}");
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		try {
+//			cstmt.execute();
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		
 	}
 
 	@Override
-	public int updateDept(String dname, String location, int dno) {
+	public int updateDept(Dept dept) {
 		String update = "UPDATE Dept SET DName = ?, location = ? WHERE DNo = ?";
 		
 		int count = 0;
@@ -48,9 +63,9 @@ public class DeptDaoImp implements IDeptDao{
 		try {
 			PreparedStatement pst = conn.prepareStatement(update);
 			
-			pst.setString(1, dname);
-			pst.setString(2, location);
-			pst.setInt(3, dno);
+			pst.setString(1, dept.getDname());
+			pst.setString(2, dept.getLocation());
+			pst.setInt(3, dept.getDno());
 			
 			count = pst.executeUpdate();
 			

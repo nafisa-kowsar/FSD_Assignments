@@ -31,19 +31,13 @@ public class Client {
 			switch (choice) {
 			case 1:
 				Dept dept1 = readData();
-				int count1 = dao.insertDept(dept1);
-				System.out.println(count1 + " records inserted successfully");
+				int count = dao.insertDept(dept1);
+				System.out.println(count + " record inserted successfully");
 			
 				break;
 			case 2:
-				System.out.println("Enter Dno whose record needs to be updated");
-				int dno2 = scanner.nextInt();
-				scanner.nextLine();
-				System.out.println("Enter Dname which need to be changed");
-				String dname = scanner.nextLine();
-				System.out.println("Enter Location which need to be changed");
-				String loc = scanner.nextLine();
-				int count2 = dao.updateDept(dname, loc, dno2);
+				Dept dept2 = readData();
+				int count2 = dao.updateDept(dept2);
 				System.out.println(count2 + "record updated succesfully");
 				break;
 			case 3:

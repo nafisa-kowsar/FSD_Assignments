@@ -6,8 +6,11 @@ public class Dept {
 	private String dname;
 	private String location;
 	
+	
+
 	public Dept() {
-		
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	public Dept(int dno, String dname, String location) {

@@ -2,6 +2,9 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\NAFISA\OneDrive\Documents\Hexaware Training Programme\Java FSD\STS_Workspace\Week1"/>
+			<item value="C:\Users\NAFISA\OneDrive\Documents\Hexaware Training Programme\Java FSD\STS_Workspace\Week1\myapp"/>
+			<item value="C:\Users\NAFISA\OneDrive\Documents\Hexaware Training Programme\Java FSD\STS_Workspace\Week1\Java11Features"/>
 			<item value="C:\Users\NAFISA\OneDrive\Documents\Hexaware Training Programme\Java FSD\STS\OOPsConcepts\src"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -14,6 +17,7 @@
 		</list>
 	</section>
 	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="internal"/>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
 			<item value="[artifactId]-TRUNK"/>
@@ -25,10 +29,17 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.hexaware.springcore"/>
+			<item value="com.hexaware.springannotations"/>
+			<item value="com.hexaware.springxml"/>
 		</list>
 		<list key="groupId">
+			<item value="com.hexaware"/>
 		</list>
 		<list key="artifactId">
+			<item value="springcore"/>
+			<item value="springannotations"/>
+			<item value="springxml"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -60,5 +71,9 @@
 		<list key="version">
 			<item value="0.0.1-SNAPSHOT"/>
 		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
 	</section>
 </section>
