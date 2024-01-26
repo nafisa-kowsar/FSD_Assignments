@@ -1,0 +1,36 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "https://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+
+<hibernate-configuration>
+
+	<session-factory>
+
+
+		<!-- Database connection properties - Driver, URL, user, password -->
+		<property name="hibernate.connection.driver_class">
+			com.mysql.cj.jdbc.Driver</property>
+		<property name="hibernate.connection.url">
+			jdbc:mysql://localhost:3306/test_db</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">Nafisa_08</property>
+
+		<property name="hbm2ddl.auto">update</property>
+		<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+		<property name="show_sql">true</property>
+		
+		<!-- Mapping model class containing annotations-->
+		<mapping class="com.hexaware.HotelManagementWithMappings.entity.Administrator"/>
+		<mapping class="com.hexaware.HotelManagementWithMappings.entity.Hotel"/>
+		<mapping class="com.hexaware.HotelManagementWithMappings.entity.HotelOwner"/>
+		<mapping class="com.hexaware.HotelManagementWithMappings.entity.Reservation"/>
+		<mapping class="com.hexaware.HotelManagementWithMappings.entity.Review"/>
+		<mapping class="com.hexaware.HotelManagementWithMappings.entity.Role"/>
+		<mapping class="com.hexaware.HotelManagementWithMappings.entity.Room"/>
+		<mapping class="com.hexaware.HotelManagementWithMappings.entity.User"/>
+		<mapping class="com.hexaware.HotelManagementWithMappings.entity.UserRole"/>
+
+
+	</session-factory>
+
+
+</hibernate-configuration>		
