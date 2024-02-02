@@ -2,6 +2,8 @@ package com.hexaware.springrestjpa.restcontroller;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,16 +24,19 @@ import jakarta.validation.Valid;
 @RequestMapping("/api/hotels")
 public class HotelRestController {
 	
+	Logger logger = LoggerFactory.getLogger(HotelRestController.class);
 	@Autowired
 	IHotelService service;
 	
 	@PostMapping("/add")
-	public Hotel addHotel(@RequestBody @Valid Hotel hotel) {
+	public Hotel addHotel(@RequestBody Hotel hotel) {
+		logger.info("In Hotel Rest Controller");
+		
 		return service.insertHotel(hotel);
 	}
 	
 	@PutMapping("/update")
-	public Hotel updateHotel(@RequestBody @Valid Hotel hotel) {
+	public Hotel updateHotel(@RequestBody Hotel hotel) {
 		return service.updateHotel(hotel);
 	}
 	
