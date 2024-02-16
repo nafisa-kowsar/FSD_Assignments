@@ -1,0 +1,12 @@
+
+
+<p>Update Product Form</p>
+
+<form #updateForm="ngForm" (ngSubmit)="updateProduct(updateForm.value)">
+    Enter PID: <input type="number" name="id" ngModel [value]="productId" > <br>
+    Enter PNAME: <input type="text" name="name" ngModel> <br>
+    Enter PRICE: <input type="number" name="price" ngModel> <br>
+
+    <button type="submit">Update Product</button>
+</form>
+

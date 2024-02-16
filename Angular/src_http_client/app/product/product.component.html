@@ -1,0 +1,34 @@
+<p>product works!</p>
+<h1>Product Component</h1>
+
+<button type="button"   (click)="getAllProducts()" >Show All Products</button>
+
+<!-- <h1>{{productList | json}}</h1> -->
+
+<div class="container  col-md-4">
+    <label for="productName">Search by Name:</label>
+  <input type="text" id="productName" [(ngModel)]="searchName" />
+  <button type="button" (click)="getByName(searchName)">Search</button>
+<table  class="table table-dark">
+
+<thead>
+<tr><th>ID</th><th>NAME</th><th>PRICE</th></tr>
+</thead>
+
+<tr *ngFor="let product of  productList">
+ <td>{{product.id}}</td><td>{{product.name}}</td><td>{{product.price}}</td> 
+ <td><button type="button" class="btn btn-danger"   (click)="deleteById(product.id)">Delete</button></td> 
+</tr>
+
+
+</table>
+
+</div>
+
+
+
+
+
+
+
+
