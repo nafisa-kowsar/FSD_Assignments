@@ -1,0 +1,65 @@
+<h1>CRICKET MANAGEMENT SYSTEM</h1>
+<form #searchForm="ngForm" (ngSubmit)="searchByRole(searchForm)">
+    <div>
+        <label for="role">ROLE:</label>
+        <input type="text" name="role" ngModel #role="ngModel" required pattern="(Batsman|Bowler|Keeper|All Rounder)"
+            class="form-control" placeholder="Enter Role" />
+
+        <div *ngIf="role.invalid && (role.dirty || role.touched) " class="invalid-feedback">
+
+            <div *ngIf="role.hasError('required')">Role is required.</div>
+            <div *ngIf="role.hasError('pattern')">Invalid role. Please enter a valid role (Batsman, Bowler, Keeper,
+                All
+                Rounder).</div>
+        </div>
+    </div>
+
+    <button type="submit">Search</button>
+</form>
+
+
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header">
+            <h2>Search Results</h2>
+        </div>
+        <div class="card-body">
+            <div class="mt-4">
+                <table class="table" *ngIf="searchResults && searchResults.length > 0">
+                    <thead>
+                        <tr>
+                            <th>Player ID</th>
+                            <th>Player Name</th>
+                            <th>Jersey Number</th>
+                            <th>Role</th>
+                            <th>Total Matches</th>
+                            <th>Team Name</th>
+                            <th>State</th>
+                            <th>Description</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let player of searchResults">
+                            <td>{{ player.playerId }}</td>
+                            <td>{{player.playerName}}</td>
+                            <td>{{ player.jerseyNumber}}</td>
+                            <td>{{ player.role }}</td>
+                            <td>{{ player.totalMatches }}</td>
+                            <td>{{ player.teamName }}</td>
+                            <td>{{ player.state }}</td>
+                            <td>{{player.description}}</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <div *ngIf="!searchResults || searchResults.length === 0" class="no-results">
+                    <p>No results found.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
