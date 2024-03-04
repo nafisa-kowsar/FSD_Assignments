@@ -1,0 +1,108 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2;
+}
+
+.container {
+    width: 400px;
+    background: #fff;
+    border-radius: 15px;
+}
+
+.container .title {
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px 0;
+    line-height: 100px;
+    border-radius: 15px 15px 0px 0px;
+    color: #fff;
+    background: rgb(44, 213, 236);
+}
+
+.container form {
+    padding: 10px 30px 50px 30px;
+}
+
+.container form .input-box {
+
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+
+}
+
+.container form .input-box input {
+    height: 100%;
+    width: 100%;
+    padding-left: 20px;
+    border-radius: 25px;
+    outline: none;
+    border: 1px solid lightgrey;
+    transition: all 0.3s ease;
+}
+
+.container form .password-link {
+    margin: 5px;
+}
+
+.container form .password-link a {
+    color: rgb(44, 213, 236);
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+form .column {
+    display: flex;
+    column-gap: 15px;
+}
+
+form button {
+    height: 55px;
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 25px;
+    background: rgb(44, 213, 236);
+}
+
+form button:hover {
+    background: rgb(14, 128, 181);
+}
+
+.container form .signup-link {
+    color: black;
+    text-align: center;
+    margin: 5px 0 0 10px;
+}
+
+.container form .signup-link a {
+    color: rgb(44, 213, 236);
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 500px) {
+    form .column {
+        flex-wrap: wrap;
+    }
+
+}
